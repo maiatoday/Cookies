@@ -30,9 +30,9 @@ public class WebViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String cookie = getIntent().getStringExtra(EXTRA_COOKIE);
-        cookie="test";
+        cookie="login_82e5d2c56bdd0811318f0cf078b78bfc";
         String cookieValue = getIntent().getStringExtra(EXTRA_COOKIE_VALUE);
-        cookieValue = "xxx";
+        cookieValue = "fac3569f376055696d251af98849f81cd864565c";
         String url = getIntent().getStringExtra(EXTRA_URL);
 
         setContentView(R.layout.activity_web_view);
@@ -41,7 +41,7 @@ public class WebViewActivity extends AppCompatActivity {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        String cookieString = cookie+"="+cookieValue;
+        String cookieString = cookie+"="+cookieValue+"; Expires=Tue, 31 May 2016 18:45:20 GMT";
 
         // use cookies to remember a logged in status
         final CookieManager cookieManager = CookieManager.getInstance();
@@ -50,7 +50,7 @@ public class WebViewActivity extends AppCompatActivity {
             cookieManager.removeAllCookie();
             cookieManager.setAcceptCookie(true);
 //            cookieManager.setCookie(cookie, cookieValue);
-            cookieManager.setCookie("https://bqa-ke.oam.cool", cookieString);
+            cookieManager.setCookie("http://10.0.0.165", cookieString);
             cookieSyncManager.sync();
         } else {
             final String finalCookie = cookie;

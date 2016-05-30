@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(WebViewActivity.getIntent(this,
                 mCookie.getText().toString(),
                 mCookieValue.getText().toString(),
-                "https://xxx.xxx.xxx/"));
+                "http://10.0.0.165:8000/admin/jobs/7/edit/?XDEBUG_SESSION_START=10735"));
     }
 
     @Override
