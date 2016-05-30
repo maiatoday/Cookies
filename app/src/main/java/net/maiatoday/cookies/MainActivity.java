@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(WebViewActivity.getIntent(this,
                 mCookie.getText().toString(),
                 mCookieValue.getText().toString(),
-                "http://www.google.com"));
+                "https://xxx.xxx.xxx/"));
     }
 
     @Override
